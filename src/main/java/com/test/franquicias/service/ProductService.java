@@ -17,4 +17,6 @@ public interface ProductService {
     public ResponseEntity<String> updateStockProduct (Long id , Integer newStock);
 
     List<Product> getTopStockProductsByFranchise(Long franchiseId);
+
+    ResponseEntity<String> updateNameProduct (Long id , String name);
 }

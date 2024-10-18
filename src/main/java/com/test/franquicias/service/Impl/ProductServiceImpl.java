@@ -1,5 +1,6 @@
 package com.test.franquicias.service.Impl;
 
+import com.test.franquicias.model.Franchise;
 import com.test.franquicias.model.Product;
 import com.test.franquicias.repository.ProductRepository;
 import com.test.franquicias.service.ProductService;
@@ -49,5 +50,20 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getTopStockProductsByFranchise(Long franchiseId) {
         return productRepository.findTopStockProductsByFranchise(franchiseId);
+    }
+
+    @Override
+    public ResponseEntity<String> updateNameProduct (Long id , String name) {
+        Optional<Product> searchedProduct = productRepository.findById(id);
+        String message = " ";
+
+        if (searchedProduct.isPresent()){
+            productRepository.updateProductName(id,name);
+            message = "Se ha actualzado el nombre del producto";
+        }
+        else {
+            message = "No se pudo realizar el cambio";
+        }
+        return ResponseEntity.ok().body(message);
     }
 }

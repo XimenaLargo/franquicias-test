@@ -25,4 +25,9 @@ public class ProductController {
         List<Product> products = productService.getTopStockProductsByFranchise(franchiseId);
         return ResponseEntity.ok(products);
     }
+
+    @PutMapping("/changeName/{id}")
+    public ResponseEntity<String> updateProductName(@PathVariable Long id, @RequestParam String name) {
+        return  productService.updateNameProduct(id , name);
+    }
 }
