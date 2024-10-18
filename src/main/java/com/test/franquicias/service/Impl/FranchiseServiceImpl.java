@@ -48,4 +48,20 @@ public class FranchiseServiceImpl implements FranchiseService {
         return ResponseEntity.ok().body(message);
     }
 
+    @Override
+    public ResponseEntity<String> updateNameFranchise(Long id , String name) {
+        Optional<Franchise> searchedFranchise = franchiseRepository.findById(id);
+        String message = " ";
+
+        if (searchedFranchise.isPresent()){
+            franchiseRepository.updateFranchiseName(id,name);
+            message = "Se ha actualzado el nombre de la franquicia";
+        }
+        else {
+            message = "No se pudo realizar el cambio";
+        }
+        return ResponseEntity.ok().body(message);
+    }
+
+
 }
