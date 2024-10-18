@@ -1,9 +1,7 @@
 package com.test.franquicias.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name = "products")
@@ -20,7 +18,7 @@ public class Product {
     private String name;
 
     @Column
-    private int stock;
+    private Integer stock;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "branches_idbranches" , nullable = false)
