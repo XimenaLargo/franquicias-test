@@ -1,5 +1,6 @@
 package com.test.franquicias.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +23,7 @@ public class Branch {
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL , mappedBy = "branch")
+    @JsonIgnore
     private List<Product> productList;
 
     @ManyToOne(fetch = FetchType.EAGER)
