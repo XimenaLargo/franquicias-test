@@ -22,4 +22,9 @@ public class BranchController {
     public ResponseEntity<String> deleteProduct (@PathVariable Long id){
         return branchService.deleteProduct(id);
     }
+
+    @PutMapping("/changeName/{id}")
+    public ResponseEntity<String> updateBranchName(@PathVariable Long id, @RequestParam String name) {
+        return  branchService.updateNameBranch(id , name);
+    }
 }

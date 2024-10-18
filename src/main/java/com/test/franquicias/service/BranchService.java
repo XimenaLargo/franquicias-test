@@ -11,4 +11,6 @@ public interface BranchService {
     ResponseEntity<String> addNewProduct(Product product);
 
     ResponseEntity<String> deleteProduct(Long id);
+
+    ResponseEntity<String> updateNameBranch (Long id , String name);
 }
