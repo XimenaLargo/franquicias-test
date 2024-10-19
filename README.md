@@ -1,5 +1,7 @@
 # Franquicias
 
+Para la ejecución de este proyecto es necesario crear una base de datos en mysql, una vez se cree esta base de datos setear los datos de la conexion con esta misma en el archivo application.properties del proyecto java.
+
 ### 🌟 Ejecución
 
 #####  Via IntelliJ IDEA
