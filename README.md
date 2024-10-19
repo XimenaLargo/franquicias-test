@@ -20,7 +20,15 @@ $ git clone https://github.com/XimenaLargo/franquicias-test.git
    │   pom.xml
    └───src
 ```
-4. A continuacion iremos a la siguiente rua > main > java > com.test.franquicias and run the FranquiciasApplication
+4. Primero sustituye los valores del archivo application.properties por los valores de la base de datos local
+```
+DB_HOST
+DB_PORT
+DB_NAME
+DB_USER
+DB_PASSWORD
+```
+A continuacion iremos a la siguiente rua > main > java > com.test.franquicias and run the FranquiciasApplication
 
 5. Una vez e haga correr el programa, debería verse la siguiente estructura y generarse la carpeta target
 ```
@@ -56,7 +64,16 @@ $ cd franquicias
    └───src
 ```
 4. IMPORTANTE !!! Debes tener instalado Maven sigue el enlace para la intalacion  [here](https://maven.apache.org/install.html)
-5. Una vez te asegures que tienes maven instalado ejecutamos el siguiente comando:
+
+Primero sustituye los valores del archivo application.properties por los valores de la base de datos local
+```
+DB_HOST
+DB_PORT
+DB_NAME
+DB_USER
+DB_PASSWORD
+```
+Una vez te asegures que tienes maven instalado y cambies los valores de la base de datos en el application.properties  ejecutamos el siguiente comando:
 ```
 $ mvn package
 ```
