@@ -150,8 +150,23 @@ PUT:
 http://localhost:8080/api/v1/products/changeStock/{idProduct}?stock={nuevoStock}
 ```
 
-#### 6. Endpoint para mostrar cual es el productoque más stock tiene por sucursal para una franquicia puntual.
+#### 6. Endpoint para mostrar cual es el producto que más stock tiene por sucursal para una franquicia puntual.
 GET:
 ```
 http://localhost:8080/api/v1/products/top-stock/{idFranchise}
+```
+#### 7. Endpoint que permite actualizar el nombre de una franquicia
+PUT:
+```
+http://localhost:8080/api/v1/franchises/changeName/{idFranchise}?name={nuevoNombre}
+```
+#### 8. Endpoint que permite actualizar el nombre de una sucursal
+PUT:
+```
+http://localhost:8080/api/v1/branches/changeName/{idBranch}?name={nuevoNombre}
+```
+#### 9. Endpoint que permite actualizar el nombre de un producto
+PUT:
+```
+http://localhost:8080/api/v1/products/changeName/{idProduct}?name={nuevoNombre}
 ```
